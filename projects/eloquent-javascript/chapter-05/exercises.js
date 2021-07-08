@@ -1,17 +1,34 @@
 // /////////////////////////////////////////////////////////////////////////////
 // flatten /////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
-
-function flatten() {
-
+/**
+ * flatten: takes an array of arrays and uses reduce combined with concat to 
+ * returns all elements from each array combined into a single array
+ */
+//i: an array of arrays
+//o: a single array of all elements from original array
+//c: must be an array of arrays
+//e: none
+function flatten(array) {
+  return array.reduce((x, y) => x.concat(y));
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 // loop ////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
-
-function loop() {
-
+/**
+ * loop: takes a value representing number of iterations, a test function that
+ * tests if the loop conditions are still met, an update function that updates
+ * the loop counter, and a body function that performs an action to be repeated
+ */
+//i: number value, func test, func update, func body
+//o: whatever actions are performed by the body function
+//c: must fulfill all parameters
+//e: none
+function loop(value, test, update, body) {
+  for(let i = value; test(i); i = update(i)){
+    body(i);
+  }
 }
 
 // /////////////////////////////////////////////////////////////////////////////
