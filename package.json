@@ -1,0 +1,22 @@
+{
+  "name": "lowdown-t-suarez",
+  "version": "1.0.0",
+  "description": "My first website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-suarez/t-suarez.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t-suarez/t-suarez.github.io/issues"
+  },
+  "homepage": "https://github.com/t-suarez/t-suarez.github.io#readme",
+  "dependencies": {
+    "shrinkwrap": "^0.4.0"
+  }
+}
