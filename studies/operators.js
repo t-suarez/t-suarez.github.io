@@ -14,6 +14,20 @@
  */
  
  /**
+  * Assignment operators take the value on the left side of the operator and 
+  * sets it to the value on the right side of the operator.
+  */
+ 
+ var test = 123; //variable test is equal to 123
+ var foo = test;// variable foo is now equal to test, which is 12
+ console.log(foo)// -> 123;
+ 
+ /**
+  * The assignment operator can also be paired with arithmetic operators, which
+  * is explained later on in the document
+  */
+ 
+ /**
   * Comparison operators compare 2 values and evaluate to a boolean value
   */
   
@@ -61,25 +75,25 @@
 /**
  * Arithmetic operators in Javascript are basic math operators, like
  * +, -, *, /
- * along with some other coding specific operations like
+ * along with some other coding specific assignment/arithmetic operations like
  * +=, -=, *=, /=
  * these operators above apply to the left operand the result of the left and 
  * the right operands change, based on the mathmatical operation before the "=".
  * So "x += 1" is a representation of "x = x + 1", etc.
  */
   var x = 0;
-  console.log(2 + 1)  // -> 3
-  console.log(2 - 1)  // -> 1
-  console.log(2 * 1)  // -> 2
-  console.log(2 / 1)  // -> 2
-  console.log(x += 1) // -> 1
-  console.log(x -= 1) // -> 0
-  console.log(x *= 3) // -> 0
-  console.log(x /= 1) // -> 0
+  console.log(2 + 1);  // -> 3
+  console.log(2 - 1);  // -> 1
+  console.log(2 * 1);  // -> 2
+  console.log(2 / 1);  // -> 2
+  console.log(x += 1); // -> 1
+  console.log(x -= 1); // -> 0
+  console.log(x *= 3); // -> 0
+  console.log(x /= 1); // -> 0
   
  //negation is unary arithmetic function
  x = 3;
- console.log(-x) // -> -3
+ console.log(-x); // -> -3
  
 /**
  * String operators

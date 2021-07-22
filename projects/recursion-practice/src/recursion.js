@@ -348,11 +348,17 @@ var nestedEvenSum = function(obj) {
 
 // 29. Flatten an array containing nested arrays.
 // Example: flatten([1,[2],[3,[[4]]],5]); // [1,2,3,4,5]
-var flatten = function(arrays) {
+var flatten = function(arrays){
   var arr = [];
-  if(Array.isArray(arrays[0])) return arrays.concat(flatten(arrays[0]));
-  arr.push(arrays[0]);
-  return arr.concat(flatten(arrays.slice(1)));
+  arrays.forEach((element) => {
+    if (Array.isArray(element)){
+      arr.push(...flatten(element));
+    }
+    else{
+      arr.push(element);
+    }
+  });
+  return arr;
 };
 
 // 30. Given a string, return an object containing tallies of each letter.
@@ -386,6 +392,13 @@ var compress = function(list) {
 // itself.
 // Example: augmentElements([[],[3],[7]], 5); // [[5],[3,5],[7,5]]
 var augmentElements = function(array, aug) {
+  var arr = [];
+  array[0].push(aug);
+  arr.push(array[0]);
+  if(array[1] !== undefined){
+    return arr.concat(augmentElements(array.slice(1), aug));
+  }
+  return arr;
 };
 
 // 33. Reduce a series of zeroes to a single 0.

@@ -74,12 +74,17 @@ reassign = "y"; //this is a valid statement
 
 //A "let" variable can also be reassigned
 let reassign2 = "z";
+console.log(reassign2); // -> "z"
 reassign2 = "a"; //this is a valid statement
+console.log(reassign2); // -> "a"
 
 //Unlike var and let, "const" cannot be reassigned after its inital declaration, and attemtping to do so
 //will result in an error
 const forever = "forever";
 //a line of code following the previous line saying something like "forever = 'x'; " would throw an error
+console.log(forever);
+//forever = 123; <---------this throws an error, can't reassign a const variable
+console.log(forever);
 
 //Scope
 //Another difference between the variable keywords is the scope that the variable occupies
@@ -93,6 +98,22 @@ const forever = "forever";
     outside of the loop blocks. "var" variables declared within if and loop blocks DO persist
     outside of the loop blocks.
 */
+
+if(true){
+    let letTest = 123; //<- "letTest" is block-scoped to the if statement and can't
+}                   //   be accessed outside of the if block.
+for(let i = 0; i < 5; i++){
+    const counter = 0;
+    console.log(counter); // -> prints 0 to console five times
+}
+
+//Just like let in the preceding examples, const is block scoped and can't
+//be accessed outside of the for loop that it was declared in.
+
+//console.log(letTest); <- letTest was declared inside the if with a let keyword and can't be accessed outside.
+//console.log(counter); <- const counter from the for loop also is block scoped and can't be accessed.
+
+/***************************************************/
 
 //Hoisting
 //At runtime, the Javascript compiler will pull all "var" keyword variable and function declarations

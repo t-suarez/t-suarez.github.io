@@ -118,6 +118,17 @@ console.log(str1.concat(str2)); // -> "Hello World"
  
  console.log(obj); // -> { prop1: 'abc', prop2: 123, prop3: [] }
  
+ //In order to access a value in an object we can use bracket or dot notation:
+ console.log(obj.prop1); //dot notation
+ console.log(obj["prop2"]); //brakcet notation
+ 
+ /**
+  * The use case for bracket notation would be if we had to use an expression
+  * that would evaluate to the name of the object's property.
+  */ 
+ let objProp = "prop1";
+ console.log(obj[objProp]); //prints "abc"
+ 
 /**
  * ARRAYS
  * Arrays in javascript are actually objects with integer-keyed properties and
@@ -136,3 +147,11 @@ console.log(str1.concat(str2)); // -> "Hello World"
  console.log(arr); // -> [ 0, 1, 2, 3, 4 ]
  arr.push(5);
  console.log(arr); // -> [ 0, 1, 2, 3, 4, 5 ]
+ 
+ /**
+  * In order to access array values, we must use bracket notation or Array 
+  * methods to manipulate and return values at particular array indexes.
+  */
+ console.log(arr[1]); //prints 1
+ console.log(arr.pop()); //prints 0
+ 

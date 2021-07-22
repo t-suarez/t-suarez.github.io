@@ -1073,7 +1073,7 @@
 
 
 
-    xdescribe('32. Augment each element in nested arrays', function() {
+    describe('32. Augment each element in nested arrays', function() {
 
       it('should return an array', function() {
         expect(Array.isArray(augmentElements([[],[3],[7]], 5))).to.equal(true);
